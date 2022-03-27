@@ -27,6 +27,10 @@
 \usepackage[square,numbers]{natbib}
 \usepackage{subfigure} %Mehrere Bilder in einer Figure-Umgebung
 \usepackage{lipsum}  
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\MakeOuterQuote{"}
 
 
 %siunitx-Konfiguration. Damit werden die richtigen Font-Einstellungen erkannt (also beispielsweise fett, kursiv etc.) und damit  ebenfalls die deutsche Zeichensetzung, insbesondere Trennungszeichen, benutzt werden. 
@@ -69,8 +73,9 @@
 
 \newcommand{\VerfasserEINS}{Hannes Frey}
 \newcommand{\MatNoEINS}{39311}
-\newcommand{\StudiengangEINS}{Medieninformatik}
+\newcommand{\StudiengangEINS}{MI7}
 \newcommand{\SemesterEINS}{6. Semester}
+\newcommand{\MailEINS}{hf018@hdm-stuttgar.de}
 
 \newcommand{\VerfasserZWEI}{Verfasser 2}
 \newcommand{\MatNoZWEI}{Matrikelnummer 2}
@@ -103,8 +108,8 @@
 \vspace{1cm}
 \begin{center}
 \begin{tabular}{ll}
-\large{Verfasser:}		& \large{\VerfasserEINS\;(\StudiengangEINS),} \\ 
- 						& \large{\SemesterEINS}, \\
+\large{Verfasser:}		& \large{\VerfasserEINS\;(\StudiengangEINS, \SemesterEINS),} \\ 
+						& \large{\MailEINS}, \\
  						& \large{\MatNoEINS} \\
 % 						\vspace{0cm}\\
 %						& \large{\VerfasserZWEI\;(\StudiengangZWEI),} \\
@@ -149,47 +154,97 @@ Stuttgart, den \PROTOKOLLDATUM
 % Abbildungsverzeichnis
 \listoffigures
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-% Die erste eckige Klammer ist optional, die darin angegebene Bezeichnung steht im Inhaltsverzeichnis anstelle des hinteren (längeren) Namens.
 
+% Tabellenverzeichnis
 \listoftables
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 
 \newpage
+\onehalfspacing 
 
+% Die erste eckige Klammer ist optional, die darin angegebene Bezeichnung steht im Inhaltsverzeichnis anstelle des hinteren (längeren) Namens.
 \section[Einführung]{Einführung und Versuchsziel}
 
-
+Dieser Versuch soll dazu dienen erste Schritte im Umgang mit einem FFM-Drucker zu erlernen, und sich dem darunterliegenden Workflow für folgende Versuche bewusst zu werden. Dazu wird in einem ersten Schritt ein stl-Modell eines simplen Quaders mit der Software PrusaSlicer für den 3D-Druck vorbereitet und per SD-Karte an den Drucker übertragen. Anschließend wird am Drucker der Druck gestartet und beobachtet, wie die erste Schicht Plastik aufgetragen wird. Um Folgen einer schlecht, beziehungsweise falsch eingestellten Drucknivellierung zu begreifen, beginnt man nach einiger Zeit die Einstellung "z-adjust" verändert, was das Offset der Höhe des Druckkopfes beeinflusst. 
 
 \section[Verwendete Geräte, Materialien und Hilfsmittel]{Verwendete Geräte, Materialien und Hilfsmittel}
 
-% Eine einfachte Grafik (jpg, jpg,...) kann wie folgt eingebunden werden, dazu selbstverständlich Kommentarzeichen entfernen. Tipp: Markieren und Strg-T
+Zur Versuchsdurchführung wurde ein 3D Drucker der Marke Prusa, Modell i3 MK3S+ mit Filament des Typs PLA verwendet. Der gedruckte Prototyp musste mit einem Plastikspachtel von der Druckfläche entfernt werden.
 
-%\begin{figure} [htbp]
-%	\centering
-%	\includegraphics[width=0.85\textwidth]{Abbildungen/<Dateiname>}
-%	%Dateipfad, falls im Order dieses Dokuments ein Unterordner "Abbildungen" besteht, der die entsprechende Abbildung enthält
-%	\caption{Dies ist eine Bildunterschrift}
-%	\label{fig:Grafik1}
-%\end{figure}
-
-In Abb.\,\ref{fig}...% Da das \label{fig:Grafik} (noch) nicht existiert erscheint "??" statt zB. [1] im Dokument.
-
-
+Zur Protokollerstellung kam \LaTeX\;zum Einsatz, Screenshots des PrusaSlicers konnten mit der Windows eigenen Lösung erstellt werden. Bilder des gedruckten Objekts wurden mit einem Smartphone Marke Google erstellt, ein 2D-Scan mit einem Brother MFC-9332CDW Drucker.
 
 \section[Versuchsdurchführung]{Versuchsdurchführung}
 
+Zu Beginn wurde das Programm PrusaSlicer gestartet und das erscheinende "First-Steps" Modal abgearbeitet. Dabei wurden Einstellungen vorgenommen, wobei viele bereits durch die Auswahl des zu verwendenden Druckers vordefiniert wurden. Zudem wurde die Präferenz gesetzt "*.3mf" und ".stl" Dateien in PrusaSlicer zu öffnen um in Zukunft diese komfortabler öffnen zu können.
+Im Anschluss wurde das vorgegebene stl-Model mit dem Programm für den 3D-Drucker vorbereitet, indem die Datei öber das Kontextmenü des Programms geladen wurde und man im oberen rechten Bereich des Programms die Qualitätseinstellungen (siehe Abb.\ref*{quality_settings}) für den Druck bestimmt, um daraufhin das Modell über den Button unten rechts zu "slicen" (Abb. \ref*{slice_now})
+
+
 \begin{figure}[htbp]
-\centerline{\includegraphics[width=100px]{images/001.jpg}}
-\caption{This is an image from a text that uses color to teach music.}
-\label{fig}
+\centerline{\includegraphics[width=200px]{./images/print_settings.png}}
+\caption{PrusaSlicer - Qualitätsteinstellungen für das Slicen}
+\label{quality_settings}
 \end{figure}
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=200px]{./images/slice_now.png}}
+\caption{PrusaSlicer - Button Slice Now}
+\label{slice_now}
+\end{figure}
+
+Das so vorbereitete Modell kann dann auf eine SD-Karte gespeichert werden (Abb. \ref*{export}) und diese am Drucker eingesteckt werden um die Datei dort zu öffnen und in folgenden Schritten zu drucken.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=200px]{./images/export.png}}
+\caption{PrusaSlicer - Export G-code für den Druck}
+\label{export}
+\end{figure}
+
+Anstatt direkt mit dem Drucken zu starten, wurde zunächst die Bedienoberfläche des Druckers untersucht um sich damit vertraut zu machen. Daraufhin konnte der Druck gestartet werden und nach kurzem warten darauf, dass der Drucker die zuvor eingestellten Drucktemperaturen erreicht hat, beginnt der Druck und das Verändern der z-Achsen adjustierung konnte vorgenommen werden. Hierfür konnten während des Drucks die Einstellung "z-live-adjust" am Bedienfeld des Druckers verwendet werden. Um objektive Aussagen zu treffen wurde der Druckkopf jeweils um 0.05mm in der Höhe verstellt, abhänging vom bisher eingestellten Ausgangspunkt $z_0$. Da nach bereits drei Höhenveränderungen je Richtung deutliche Ergebnisse zu sehen waren, wurden die Messungen damit beendet und die in Tabelle \ref*{z_adjust} zu sehenden z-Abstände entstanden.
+
+\bgroup
+\def\arraystretch{1.6}%
+\begin{table}[]
+\caption{Verwendete z-adjust Werte}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+	 & Höhe (z-adjust) {[}mm{]} \\ \hline
+z\_0 & -2,295                   \\ \hline
+z\_1 & -2,345                   \\ \hline
+z\_2 & -2,395                   \\ \hline
+z\_3 & -2,445                   \\ \hline
+z\_4 & -2,245                   \\ \hline
+z\_5 & -2,195                   \\ \hline
+z\_6 & -2,145                   \\ \hline
+\end{tabular}
+\label{z_adjust}
+\end{table}
+\egroup
 
 \section[Auswertung und Analyse]{Auswertung und Analyse}
 
-\lipsum[2]
+Die Bedienung des Programms PrusaSlicer, sowie die Oberfläche des Druckers waren sehr intuitiv nutzbar und es Bedarf keiner weiteren Analyse.
 
-Hier wird eine Quelle zitiert \cite{Quelle}.
 
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=230px]{./images/front.png}}
+\caption{Gedrucktes Modell - Oberseite}
+\label{front}
+\end{figure}
+
+In den Abbilungen \ref*{front} und \ref*{back} ist ein Scan des gedrucken Objektes zu sehen. In den Bereichen von $z_1$ bis $z_3$ befindet sich der Druckkopf dabei näher am Druckbett, was dazu führt, dass das extrudierte Material in der Höhe nicht mehr genug Platz findet und sich daraufhin auch zur Seite hin ausbreitet. Die Folge dessen ist dann, dass die weiteren Fahrten des Druckkopfes vorbei an den zu breit aufgetragenen Schichten selbiges Problem haben, das Material dann aber nur noch in eine Richting ausweichen kann. Das ganze führt zu einer Wellenartigen Struktur, die man besonders in der Sicht von oben in Abbildung \ref*{front} erkennen kann.
+
+Die Folgen eines zu großen Abstandes zu Druckbett lassen sich in Abbildung \ref*{back} besser erkennen, denn schon bei der ersten Erhöhung $z_4$ haftet das Material nicht mehr ideal an der Druckplatte. Bei $z_6$ lassen sich bereits Spalten zwischen den Strängen an Material erkennen, was darauf schließen lässt, dass diese sich nicht miteinander verbinden konnten und so keine geschlossene Schicht entstanden ist. 
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=230px]{./images/back.png}}
+\caption{Gedrucktes Modell - Unterseite}
+\label{back}
+\end{figure}
+
+Abschließend lässt sich sagen, dass beide Richtungen der Höhenverstellung zeigten, wie wichtig die Bedeutung der korrekte Höhe des Druckkopfes für einen erfolgreichen Druck ist. Sowohl ein zu nah als auch zu fern eingestellter Kopf führt dazu, dass das Material sich unterienander schlecht verbindet und die Haftung zum Druckbett nicht ideal ist. Diese Haftung ist speziell für den späteren Verlauf eines Druckes wichtig.
+
+%Hier wird eine Quelle zitiert \cite{Quelle}.
+\newpage
 \begin{thebibliography}{999}
 \bibitem{Quelle} Versuchsanleitung zu (Abgerufen am 23.03.2022) 
 \end{thebibliography}
