@@ -205,8 +205,28 @@ z-offset Soll {[}mm{]} & z-offset Ist {[}mm{]} \\ \hline
 \end{table}
 \egroup
 
+
+\begin{figure}[H]
+	\centerline{\includegraphics[width=350px]{./images/prusaSlicer.png}}
+	\caption{Die zwei 3D Objekte im Slicer Programm}
+	\label{prusa}
+	\end{figure}
+
+Abbildung \ref*{fig:prusa} zeigt die beiden zu druckenden Objekte in PrusaSlicer, es wurden jeweils Raupe und Quader gleichzeitig gedruckt. Wichtig war die Einstellungen des Slicers anzupassen, sodass möglichst wenig breite durch Hilfestellungen des Slicers künstlich hinzugefügt oder abgezogen wird. Im Vergleich zu den Voreinstellungen wurden folgende Parameter gesetzt:
+\begin{itemize}
+	\item[--] Material: PLA
+	\item[--] Düse: 0,4 mm
+	\item[--] Extrusionsbreite erste Schicht: 0,42 mm
+	\item[--] Schichtdicke: 0,1 mm
+	\item[--] Schichtdicke der ersten Schicht: 0,1 mm
+	\item[--] Äußere Kontur zuerst
+	\item[--] Schürze: 3
+	\item[--] Elefantenfußkompensation: aus
+\end{itemize}
+
 \section[Auswertung und Analyse]{Auswertung und Analyse}
-Die Druckbettnivellierung ergab die in Tabelle \ref*{tab:druckbett1} zu sehende Werte. Da hier jedoch nicht ersichtlich war, welche Ecke welcher Position in der Matrix zuzuordnen war, wurde für einen weiteren Messlauf in die vordere linke Ecke ein Stück Papier untergelegt, was zu der in Tabelle \ref*{tab:druckbett2} aufgelisteten Werte führt. Man erkennt deutlich die gestiegenen Werte, und zudem wurde klar, dass die vordere linke Ecke des Bettes die untere linke Ecke der Matrix abgebildet wird. 
+\subsection*{Druckbettnivellierung}
+Die Druckbettnivellierung ergab die in Tabelle \ref*{tab:druckbett1} zu sehenden Werte. Da hier jedoch nicht ersichtlich war, welche Ecke welcher Position in der Matrix zuzuordnen war, wurde für einen weiteren Messlauf in die vordere linke Ecke ein Stück Papier untergelegt, was zu der in Tabelle \ref*{tab:druckbett2} aufgelisteten Werte führt. Man erkennt deutlich die gestiegenen Werte, und zudem wurde klar, dass die vordere linke Ecke des Bettes die untere linke Ecke der Matrix abgebildet wird. 
 
 \begin{table}[H]
 \centering
@@ -240,22 +260,100 @@ Die Druckbettnivellierung ergab die in Tabelle \ref*{tab:druckbett1} zu sehende 
 \end{tabular}
 \end{table}
 
-Visualisiert in Abbildung \ref*{fig:druckbett3d} erkennt man die Schieflage des Druckbetts. Dank der integrierten Funktion des Druckers, diese vor jedem Druck zu messen und auszugleichen, ist das keine Sache die zu beachten ist.
+Visualisiert in Abbildung \ref*{fig:druckbett3d} erkennt man die Schieflage des Druckbetts. Dank der integrierten Funktion des Druckers, diese vor jedem Druck zu messen und auszugleichen, ist das keine Sache die vor dem Drucken zu beachten ist.
 
 \begin{figure}[H]
 \centerline{\includegraphics[width=350px]{./images/diagramm.png}}
-\caption{3D Visualisierung des Druckbetts}
+\caption{3D Visualisierung des Druckbettniveaus}
 \label{fig:druckbett3d}
 \end{figure}
 
 
-Überhöhung
+\subsubsection*{Druckobjekt Breitenmessung}
+Im zweiten Teil des Versuches entstanden die in Tabelle \ref*{tab:raupe} - \ref*{tab:y-achse} zu sehenden Messwerte, in Abbildung \ref*{fig:raupe_Diagramm} sowie Abbildung \ref*{fig:quader_Diagramm} sind diese visualisiert. In Abbildung \ref*{fig:scan} sind die gedruckten Objekte als Scan zu sehen. Gemessen wurde je Objekt fünf Mal, je einmal an Anfang und Ende mit drei gleichmäßig verteilten Punkten dazwischen.
 
+\begin{figure}[H]
+\centerline{\includegraphics[width=350px]{./images/scan.png}}
+\caption{Gedruckte Objekte}
+\label{fig:scan}
+\end{figure}
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+z-offset    & -1,523 & -1,518 & -1,515 & -1,513 & -1,51 \\ \hline
+Messpunkt 1 & 0,78   & 0,73   & 0,8    & 0,78   & 0,7   \\ \hline
+Messpunkt 2 & 0,69   & 0,65   & 0,62   & 0,67   & 0,62  \\ \hline
+Messpunkt 3 & 0,64   & 0,62   & 0,64   & 0,62   & 0,58  \\ \hline
+Messpunkt 4 & 0,64   & 0,68   & 0,66   & 0,59   & 0,56  \\ \hline
+Messpunkt 5 & 0,66   & 0,67   & 0,66   & 0,59   & 0,56  \\ \hline
+Mittelwert  & 0,682  & 0,67   & 0,676  & 0,65   & 0,604 \\ \hline
+\end{tabular}
+\caption{Gemessene Breite der Raupe bei verschiedenem Z-Offset}
+\label{tab:raupe}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+z-offset    & -1,523 & -1,518 & -1,515 & -1,513 & -1,51  \\ \hline
+Messpunkt 1 & 15,07  & 15,07  & 15,1   & 15,08  & 15     \\ \hline
+Messpunkt 2 & 15,04  & 14,91  & 14,95  & 15     & 14,98  \\ \hline
+Messpunkt 3 & 15,08  & 14,98  & 14,9   & 14,95  & 14,98  \\ \hline
+Messpunkt 4 & 15,02  & 14,98  & 14,96  & 14,94  & 15,01  \\ \hline
+Messpunkt 5 & 15,1   & 15,15  & 14,96  & 15,05  & 15,02  \\ \hline
+Mittelwert  & 15,062 & 15,018 & 14,974 & 15,004 & 14,998 \\ \hline
+\end{tabular}
+\caption{Gemessene x-Breite des Quaders bei verschiedenem Z-Offset}
+\label{tab:x-achse}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+z-offset    & -1,523 & -1,518 & -1,515 & -1,513 & -1,51  \\ \hline
+Messpunkt 1 & 15,13  & 15,1   & 15,08  & 15,04  & 15,01  \\ \hline
+Messpunkt 2 & 15,03  & 15,09  & 14,99  & 14,95  & 14,95  \\ \hline
+Messpunkt 3 & 15,04  & 15,11  & 14,97  & 15     & 14,99  \\ \hline
+Messpunkt 4 & 15     & 15,12  & 14,98  & 14,96  & 14,92  \\ \hline
+Messpunkt 5 & 15,2   & 15,18  & 15,03  & 15,03  & 15,02  \\ \hline
+Mittelwert  & 15,08  & 15,12  & 15,01  & 14,996 & 14,978 \\ \hline
+\end{tabular}
+\caption{Gemessene y-Breite des Quaders bei verschiedenem Z-Offset}
+\label{tab:y-achse}
+\end{table}
+
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=350px]{./images/raupe.png}}
+\caption{Durchschnittliche Breite der Raupe je Z-Offset}
+\label{fig:raupe_Diagramm}
+\end{figure}
+
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=350px]{./images/quader.png}}
+\caption{Durchschnittliche Breite des Quaders je Z-Offset}
+\label{fig:quader_Diagramm}
+\end{figure}
+
+Als Ergebnis lässt sich sagen, dass die Breite gedruckter Objekte direkt abhängig von der eingestellten Z-Offset Distanz ist. In den beiden Diagrammen wird klar, dass je weiter weg die Druckdüse vom Druckbett Filament extrudiert, desto geringer ist die Objektbreite. Grund hierfür ist, dass unabhängig vom z-Offset immer die gleiche Menge an Material durch die Düse befördert wird. Befindet sich der Druckkopf nun näher am Druckbett, hat das Material kein Raum nach oben um sich auszubreiten und quillt an den Seiten hervor. Dies macht die erste Schicht dünner und breiter. Anders verhält es sich bei einem größeren z-Offset, denn hier muss das Filament nicht zu Seite quillen und stattdessen ist diese Schicht minimal höher.
+
+Interessant ist, dass die Raupe eine Breite von 0,42 mm haben soll, diese jedoch selbst an der geringsten Stelle 0,6 mm beträgt. Die Vermutung liegt nahe, dass sich das voreingestellte Offset von -1,515 mm bereits zu nah am Druckbett befindet, eventuell da es bei vorheriger Nutzung nicht auf zurückgestellt wurde.
 
 \newpage
 \begin{thebibliography}{999}
-\bibitem{Quelle} Versuchsanleitung zu (Abgerufen am 23.03.2022) 
+\bibitem{Quelle} Versuchsanleitung zu (Abgerufen am 30.03.2022) 
 \end{thebibliography}
+
+
 
 % Für Dokumente mit mehr Referenzen empfiehlt es sich, auf eine separate .bib -Datei umzusteigen, die alle Referenzen enthält. Diese Referenzen können bei den meisten wissenschaftlichen Publikationen direkt über "BibTex-Export" oder ähnliches heruntergeladen werden. Anstelle von \begin{thebibliography}...\bibitem{}..\bibitem{}..\end{thebibliography} muss dann lediglich \bibliography{Dateiname.bib} eingebunden werden.
 
