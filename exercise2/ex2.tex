@@ -68,7 +68,7 @@
 
 % Hier können die individuellen Anpassungen vorgenommen werden, die sich auf das Titelblatt und die Kopfzeilen auswirken.
 
-\newcommand{\VERSUCHSDATUM}{23.03.2022}
+\newcommand{\VERSUCHSDATUM}{30.03.2022}
 \newcommand{\PROTOKOLLDATUM}{\today}
 
 \newcommand{\VerfasserEINS}{Hannes Frey}
@@ -82,11 +82,11 @@
 \newcommand{\StudiengangZWEI}{Technologiemanagement}
 
 \newcommand{\BETREUER}{Karl Schaschek}
-\newcommand{\WORTZAHL}{993}
+\newcommand{\WORTZAHL}{2220}
 \newcommand{\GRUPPENNR}{Z-999}
 
-\newcommand{\VERSUCHSNR}{Übung 01}
-\newcommand{\VERSUCHSNAME}{Justage des Abstandes Düse - Druckbett}
+\newcommand{\VERSUCHSNR}{Übung 02}
+\newcommand{\VERSUCHSNAME}{Einfluss des Abstandes Düse – Druckbett auf die Raupenbreite}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hier beginnt die Titelseite
@@ -164,92 +164,94 @@ Stuttgart, den \PROTOKOLLDATUM
 
 % Die erste eckige Klammer ist optional, die darin angegebene Bezeichnung steht im Inhaltsverzeichnis anstelle des hinteren (längeren) Namens.
 \section[Einführung]{Einführung und Versuchsziel}
+Ziel der Übung ist es zu Verstehen, welche Auswirkungen die Einstellung des Abstandes der Düse zum Druckbett auf die Dimensionen von gedruckten Körpern hat. Speziell werden dazu eine Raupe sowie ein kleiner Quader fünf mal gedruckt, jeweils mit einem verändertem z-offset der Düse. Die Maße der entstandenen Körper werden dann gemessen und mit den Soll-Werten verglichen.
 
-Dieser Versuch soll dazu dienen erste Schritte im Umgang mit einem FFM-Drucker zu erlernen, und sich dem darunterliegenden Workflow für folgende Versuche bewusst zu werden. Dazu wird in einem ersten Schritt ein stl-Modell eines simplen Quaders mit der Software PrusaSlicer für den 3D-Druck vorbereitet und per SD-Karte an den Drucker übertragen. Anschließend wird am Drucker der Druck gestartet und beobachtet, wie die erste Schicht Plastik aufgetragen wird. Um Folgen einer schlecht, beziehungsweise falsch eingestellten Drucknivellierung zu begreifen, beginnt man nach einiger Zeit die Einstellung "z-adjust" verändert, was das Offset der Höhe des Druckkopfes beeinflusst. 
+Neben dieser Aufgabe wird außerdem die Ebenheit des Druckbettes zuvor mit der Software PrintRun analysiert.
 
 \section[Verwendete Geräte, Materialien und Hilfsmittel]{Verwendete Geräte, Materialien und Hilfsmittel}
 
-Zur Versuchsdurchführung wurde ein 3D Drucker der Marke Prusa, Modell i3 MK3S+ mit Filament des Typs PLA verwendet. Der gedruckte Prototyp musste mit einem Plastikspachtel von der Druckfläche entfernt werden.
+Zur Versuchsdurchführung wurde ein 3D Drucker der Marke Prusa, Modell i3 MK3S+ mit Filament des Typs PLA verwendet.
 
-Zur Protokollerstellung kam \LaTeX\;zum Einsatz, Screenshots des PrusaSlicers konnten mit der Windows eigenen Lösung erstellt werden. Bilder des gedruckten Objekts wurden mit einem Smartphone Marke Google erstellt, ein 2D-Scan mit einem Brother MFC-9332CDW Drucker.
+Zur Protokollerstellung kam \LaTeX\;zum Einsatz, Screenshots des PrusaSlicers sowie Printrun konnten mit der Windows eigenen Lösung erstellt werden. Bilder des gedruckten Objekts wurden mit einem Smartphone Marke Google erstellt, ein 2D-Scan mit einem Brother MFC-9332CDW Drucker.
 
 \section[Versuchsdurchführung]{Versuchsdurchführung}
 
-Zu Beginn wurde das Programm PrusaSlicer gestartet und das erscheinende "First-Steps" Modal abgearbeitet. Dabei wurden Einstellungen vorgenommen, wobei viele bereits durch die Auswahl des zu verwendenden Druckers vordefiniert wurden. Zudem wurde die Präferenz gesetzt "*.3mf" und ".stl" Dateien in PrusaSlicer zu öffnen um in Zukunft diese komfortabler öffnen zu können.
-Im Anschluss wurde das vorgegebene stl-Model mit dem Programm für den 3D-Drucker vorbereitet, indem die Datei öber das Kontextmenü des Programms geladen wurde und man im oberen rechten Bereich des Programms die Qualitätseinstellungen (siehe Abb.\ref*{quality_settings}) für den Druck bestimmt, um daraufhin das Modell über den Button unten rechts zu "slicen" (Abb. \ref*{slice_now})
+Um den geplanten Scan der Druckbettnivellierung auszuführen, musst der Drucker zunächst per USB an den Computer angeschlossen werden. Nach starten des Programms PrintRun mussten noch die korrekten Übertragungswerte für das zur Kommunikation benutzte Protokoll eingestellt werden, woraufhin befehle an den Drucker gesendet werden konnten. Die zwei wichtigen ausgeführten Kommandos waren dabei G81 sowie G80.
 
+\begin{figure}[H]
+	\centerline{\includegraphics[width=350px]{./images/printrun.png}}
+	\caption{Programm PrintRun}
+	\label{printrun}
+	\end{figure}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=200px]{./images/print_settings.png}}
-\caption{PrusaSlicer - Qualitätsteinstellungen für das Slicen}
-\label{quality_settings}
-\end{figure}
+In Abbildung \ref*{printrun} ist die Bedienoberfläche des Programms zu sehen, womit man unter anderem den Druckkopf oder die Bodenplatten bewegen kann. Nach eingeben des G80 Befehls begann der Drucker mit Hilfe des Druckkopfes due Bodenplatte abzumessen, und nach Erfolgreicher Beendigung konnte man mit G81 die gemessenen Werte ausgeben lassen.
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=200px]{./images/slice_now.png}}
-\caption{PrusaSlicer - Button Slice Now}
-\label{slice_now}
-\end{figure}
-
-Das so vorbereitete Modell kann dann auf eine SD-Karte gespeichert werden (Abb. \ref*{export}) und diese am Drucker eingesteckt werden um die Datei dort zu öffnen und in folgenden Schritten zu drucken.
-
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=200px]{./images/export.png}}
-\caption{PrusaSlicer - Export G-code für den Druck}
-\label{export}
-\end{figure}
-
-Anstatt direkt mit dem Drucken zu starten, wurde zunächst die Bedienoberfläche des Druckers untersucht um sich damit vertraut zu machen. Daraufhin konnte der Druck gestartet werden und nach kurzem warten darauf, dass der Drucker die zuvor eingestellten Drucktemperaturen erreicht hat, beginnt der Druck und das Verändern der z-Achsen adjustierung konnte vorgenommen werden. Hierfür konnten während des Drucks die Einstellung "z-live-adjust" am Bedienfeld des Druckers verwendet werden. Um objektive Aussagen zu treffen wurde der Druckkopf jeweils um 0.05mm in der Höhe verstellt, abhänging vom bisher eingestellten Ausgangspunkt $z_0$. Da nach bereits drei Höhenveränderungen je Richtung deutliche Ergebnisse zu sehen waren, wurden die Messungen damit beendet und die in Tabelle \ref*{z_adjust} zu sehenden z-Abstände entstanden.
+Im Anschluss wurden die Raupe sowie der Quader mit in Tabelle \ref*{tab:z-offset} aufgelisteten z-offset Werten gedruckt. Jedes gedruckte Objekt wurde dann in der Breite an fünf Stellen ausgemessen. Leider bot der Drucker nicht die vorgegebenen Abweichungen nicht an, weswegen die Ist-Werte leicht daneben liegen.  
 
 \bgroup
 \def\arraystretch{1.6}%
-\begin{table}[]
-\caption{Verwendete z-adjust Werte}
+\begin{table}[H]
 \centering
+\label{tab:z-offset}
 \begin{tabular}{|c|c|}
 \hline
-	 & Höhe (z-adjust) {[}mm{]} \\ \hline
-z\_0 & -2,295                   \\ \hline
-z\_1 & -2,345                   \\ \hline
-z\_2 & -2,395                   \\ \hline
-z\_3 & -2,445                   \\ \hline
-z\_4 & -2,245                   \\ \hline
-z\_5 & -2,195                   \\ \hline
-z\_6 & -2,145                   \\ \hline
+z-offset Soll {[}mm{]} & z-offset Ist {[}mm{]} \\ \hline
+-0,006                 & -0,008                \\ \hline
+-0,003                 & -0,003                \\ \hline
++0,003                 & +0,003                \\ \hline
++0,006                 & +0,005                \\ \hline
 \end{tabular}
-\label{z_adjust}
+\caption{Z-offset Werte Ist und Soll}
 \end{table}
 \egroup
 
 \section[Auswertung und Analyse]{Auswertung und Analyse}
+Die Druckbettnivellierung ergab die in Tabelle \ref*{tab:druckbett1} zu sehende Werte. Da hier jedoch nicht ersichtlich war, welche Ecke welcher Position in der Matrix zuzuordnen war, wurde für einen weiteren Messlauf in die vordere linke Ecke ein Stück Papier untergelegt, was zu der in Tabelle \ref*{tab:druckbett2} aufgelisteten Werte führt. Man erkennt deutlich die gestiegenen Werte, und zudem wurde klar, dass die vordere linke Ecke des Bettes die untere linke Ecke der Matrix abgebildet wird. 
 
-Die Bedienung des Programms PrusaSlicer, sowie die Oberfläche des Druckers waren sehr intuitiv nutzbar und es Bedarf keiner weiteren Analyse.
+\begin{table}[H]
+\centering
+\caption{Z-Offset Niveau Werte des Druckbetts}
+\label{tab:druckbett1}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+-0,18917 & -0,16833 & -0,14333 & -0,11917 & -0,14667 & -0,19833 & -0,295   \\ \hline
+-0,14167 & -0,10417 & -0,09333 & -0,14917 & -0,14167 & -0,18083 & -0,2825  \\ \hline
+-0,08    & -0,045   & -0,045   & -0,08333 & -0,09583 & -0,15417 & -0,265   \\ \hline
+-0,03833 & -0,0375  & -0,03333 & -0,04333 & -0,085   & -0,16167 & -0,26333 \\ \hline
+0,05417  & 0,06     & 0,03667  & -0,00833 & -0,03917 & -0,10833 & -0,26083 \\ \hline
+0,105    & 0,095    & 0,06833  & 0,0125   & -0,03333 & -0,09083 & -0,24667 \\ \hline
+0,1725   & 0,14167  & 0,12583  & 0,04917  & 0,01     & -0,08583 & -0,19333 \\ \hline
+\end{tabular}
+\end{table}
 
+\begin{table}[H]
+\centering
+\caption{Z-Offset Werte des mit Papier unterlegtem Druckbetts}
+\label{tab:druckbett2}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+-0,20167 & -0,1925  & -0,16417 & -0,14167 & -0,1725  & -0,235   & -0,32083 \\ \hline
+-0,1575  & -0,12333 & -0,11417 & -0,16333 & -0,16    & -0,20417 & -0,29583 \\ \hline
+-0,09583 & -0,06167 & -0,06417 & -0,10208 & -0,11833 & -0,16167 & -0,27833 \\ \hline
+-0,04583 & -0,045   & -0,055   & -0,0625  & -0,10854 & -0,18833 & -0,27917 \\ \hline
+0,07917  & 0,0825   & 0,02     & -0,02854 & -0,065   & -0,12667 & -0,2875  \\ \hline
+0,4      & 0,23333  & 0,07833  & -0,00667 & -0,055   & -0,12417 & -0,25917 \\ \hline
+0,65083  & 0,24667  & 0,10167  & 0,01667  & -0,02333 & -0,12583 & -0,21    \\ \hline
+\end{tabular}
+\end{table}
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=230px]{./images/front.png}}
-\caption{Gedrucktes Modell - Oberseite}
-\label{front}
+Visualisiert in Abbildung \ref*{fig:druckbett3d} erkennt man die Schieflage des Druckbetts. Dank der integrierten Funktion des Druckers, diese vor jedem Druck zu messen und auszugleichen, ist das keine Sache die zu beachten ist.
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=350px]{./images/diagramm.png}}
+\caption{3D Visualisierung des Druckbetts}
+\label{fig:druckbett3d}
 \end{figure}
 
-In den Abbilungen \ref*{front} und \ref*{back} ist ein Scan des gedrucken Objektes zu sehen. In den Bereichen von $z_1$ bis $z_3$ befindet sich der Druckkopf dabei näher am Druckbett, was dazu führt, dass das extrudierte Material in der Höhe nicht mehr genug Platz findet und sich daraufhin auch zur Seite hin ausbreitet. Die Folge dessen ist dann, dass die weiteren Fahrten des Druckkopfes vorbei an den zu breit aufgetragenen Schichten selbiges Problem haben, das Material dann aber nur noch in eine Richting ausweichen kann. Das ganze führt zu einer Wellenartigen Struktur, die man besonders in der Sicht von oben in Abbildung \ref*{front} erkennen kann.
 
-Die Folgen eines zu großen Abstandes zu Druckbett lassen sich in Abbildung \ref*{back} sowie besonders in Abbildung \ref*{durchblick} besser erkennen, denn schon bei der ersten Erhöhung $z_4$ haftet das Material nicht mehr ideal an der Druckplatte. Bei $z_6$ lassen sich bereits Spalten zwischen den Strängen an Material erkennen, was darauf schließen lässt, dass diese sich nicht miteinander verbinden konnten und so keine geschlossene Schicht entstanden ist. 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=230px]{./images/back.png}}
-\caption{Gedrucktes Modell - Unterseite}
-\label{back}
-\end{figure}
+Überhöhung
 
-\begin{figure}[htbp]
-\centerline{\includegraphics[width=210px]{./images/durchblick.jpg}}
-\caption{Gedrucktes Modell - Nahaufnahme Unterseite mit Gegenlicht}
-\label{durchblick}
-\end{figure}
 
-Abschließend lässt sich sagen, dass beide Richtungen der Höhenverstellung zeigten, wie wichtig die Bedeutung der korrekte Höhe des Druckkopfes für einen erfolgreichen Druck ist. Sowohl ein zu nah als auch zu fern eingestellter Kopf führt dazu, dass das Material sich unterienander schlecht verbindet und die Haftung zum Druckbett nicht ideal ist. Diese Haftung ist speziell für den späteren Verlauf eines Druckes wichtig.
-
-%Hier wird eine Quelle zitiert \cite{Quelle}.
 \newpage
 \begin{thebibliography}{999}
 \bibitem{Quelle} Versuchsanleitung zu (Abgerufen am 23.03.2022) 

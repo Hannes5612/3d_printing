@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.15)  2 APR 2022 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.15)  2 APR 2022 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/hans/Nextcloud/HdM/SS22 - Semester 6/3D-Druck (113469)/Praktikum/exercise1/ex1.tex"
-(c:/Users/hans/Nextcloud/HdM/SS22 - Semester 6/3D-Druck (113469)/Praktikum/exercise1/ex1.tex
+**"c:/Users/hans/Nextcloud/HdM/SS22 - Semester 6/3D-Druck (113469)/Praktikum/exercise2/ex2.tex"
+(c:/Users/hans/Nextcloud/HdM/SS22 - Semester 6/3D-Druck (113469)/Praktikum/exercise2/ex2.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (c:/texlive/2021/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2021/11/13 v3.35 KOMA-Script document class (article)
@@ -579,8 +579,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (./ex1.aux)
-\openout1 = `ex1.aux'.
+ (./ex2.aux)
+\openout1 = `ex2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
 LaTeX Font Info:    ... okay on input line 94.
@@ -632,9 +632,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 94.
 LaTeX Info: Redefining \pageref on input line 94.
 LaTeX Info: Redefining \nameref on input line 94.
- (./ex1.out) (./ex1.out)
+ (./ex2.out) (./ex2.out)
 \@outlinefile=\write3
-\openout3 = `ex1.out'.
+\openout3 = `ex2.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -704,21 +704,21 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 141.
  (c:/texlive/2021/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) (./ex1.toc)
+) (./ex2.toc)
 \tf@toc=\write4
-\openout4 = `ex1.toc'.
+\openout4 = `ex2.toc'.
 
- [2] (./ex1.lof)
+ [3] (./ex2.lof)
 \tf@lof=\write5
-\openout5 = `ex1.lof'.
+\openout5 = `ex2.lof'.
 
- (./ex1.lot)
+ (./ex2.lot)
 \tf@lot=\write6
-\openout6 = `ex1.lot'.
+\openout6 = `ex2.lot'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -727,96 +727,62 @@ l.162 \newpage
                [1
 
 ]
-Overfull \hbox (1.54352pt too wide) in paragraph at lines 174--175
-[]\T1/cmr/m/n/12 Zur Pro-to-kol-ler-stel-lung kam L[]T[]Xzum Ein-satz, Screens-hots des Pru-saS-li-cers konn-
- []
-
+<./images/printrun.png, id=65, 1445.4pt x 813.0375pt>
+File: ./images/printrun.png Graphic file (type png)
+<use ./images/printrun.png>
+Package pdftex.def Info: ./images/printrun.png  used on input line 182.
+(pdftex.def)             Requested size: 351.31378pt x 197.61417pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.180 
-       [2]
-<./images/print_settings.png, id=71, 304.7385pt x 169.8345pt>
-File: ./images/print_settings.png Graphic file (type png)
-<use ./images/print_settings.png>
-Package pdftex.def Info: ./images/print_settings.png  used on input line 183.
-(pdftex.def)             Requested size: 200.75073pt x 111.8812pt.
-<./images/slice_now.png, id=73, 304.13625pt x 97.5645pt>
-File: ./images/slice_now.png Graphic file (type png)
-<use ./images/slice_now.png>
-Package pdftex.def Info: ./images/slice_now.png  used on input line 189.
-(pdftex.def)             Requested size: 200.75073pt x 64.40019pt.
-<./images/export.png, id=74, 299.9205pt x 150.5625pt>
-File: ./images/export.png Graphic file (type png)
-<use ./images/export.png>
-Package pdftex.def Info: ./images/export.png  used on input line 197.
-(pdftex.def)             Requested size: 200.75073pt x 100.78215pt.
- [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+l.186 
+       [2]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.210 
+       [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+l.210 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+l.210 
+       <./images/printrun.png>]
+<./images/diagramm.png, id=75, 362.007pt x 220.752pt>
+File: ./images/diagramm.png Graphic file (type png)
+<use ./images/diagramm.png>
+Package pdftex.def Info: ./images/diagramm.png  used on input line 246.
+(pdftex.def)             Requested size: 351.31378pt x 214.23358pt.
+ [4pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
-       <./images/print_settings.png> <./images/slice_now.png> <./images/export.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 206.
-
-<./images/front.png, id=82, 956.373pt x 755.82375pt>
-File: ./images/front.png Graphic file (type png)
-<use ./images/front.png>
-Package pdftex.def Info: ./images/front.png  used on input line 230.
-(pdftex.def)             Requested size: 230.86334pt x 182.4509pt.
-[4pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+l.250 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.236 
-      ]
-<./images/back.png, id=89, 887.11424pt x 708.84825pt>
-File: ./images/back.png Graphic file (type png)
-<use ./images/back.png>
-Package pdftex.def Info: ./images/back.png  used on input line 239.
-(pdftex.def)             Requested size: 230.86334pt x 184.46925pt.
-<./images/durchblick.jpg, id=90, 793.46437pt x 703.12688pt>
-File: ./images/durchblick.jpg Graphic file (type jpg)
-<use ./images/durchblick.jpg>
-Package pdftex.def Info: ./images/durchblick.jpg  used on input line 245.
-(pdftex.def)             Requested size: 210.78827pt x 186.78906pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+l.250 
+      ] [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.253 \newpage
-               <./images/front.png>] [6pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.253 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.253 \newpage
-               <./images/back.png> <./images/durchblick.jpg>] [7] (./ex1.aux)
-Package rerunfilecheck Info: File `ex1.out' has not changed.
+l.255 \newpage
+               <./images/diagramm.png>] [6] (./ex2.aux)
+Package rerunfilecheck Info: File `ex2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22363 strings out of 478276
- 453395 string characters out of 5850489
- 971073 words of memory out of 5000000
- 40251 multiletter control sequences out of 15000+600000
+ 22331 strings out of 478276
+ 452711 string characters out of 5850489
+ 976944 words of memory out of 5000000
+ 40227 multiletter control sequences out of 15000+600000
  482470 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,106p,10684b,892s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbl1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb>
-Output written on ex1.pdf (9 pages, 3536992 bytes).
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbl1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb>
+Output written on ex2.pdf (9 pages, 465238 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 87 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
