@@ -82,7 +82,7 @@
 \newcommand{\StudiengangZWEI}{Technologiemanagement}
 
 \newcommand{\BETREUER}{Karl Schaschek}
-\newcommand{\WORTZAHL}{2220}
+\newcommand{\WORTZAHL}{1000}
 \newcommand{\GRUPPENNR}{Z-999}
 
 \newcommand{\VERSUCHSNR}{Übung 03}
@@ -156,8 +156,8 @@ Stuttgart, den \PROTOKOLLDATUM
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
 
 % Tabellenverzeichnis
-\listoftables
-\addcontentsline{toc}{section}{Tabellenverzeichnis}
+%\listoftables
+%\addcontentsline{toc}{section}{Tabellenverzeichnis}
 
 \newpage
 \onehalfspacing 
@@ -177,7 +177,7 @@ Zur Protokollerstellung kam \LaTeX\;zum Einsatz, Screenshots des PrusaSlicers ko
 
 \section[Versuchsdurchführung]{Versuchsdurchführung}
 
-Zur Vorbereitung wurde das Programm PrusaSlicer gestartet und das zur Verfügung gestellte Modell (siehe Abbildung \ref*{model}) vier mal eingefügt. 
+Zur Vorbereitung wurde das Programm PrusaSlicer gestartet und das zur Verfügung gestellte Modell (siehe Abbildung \ref*{model}) Vier mal eingefügt. 
 
 
 \begin{figure}[H]
@@ -206,25 +206,62 @@ Zu sehen sind diese unterschiedlichen Schichtdicken in Abbildung \ref*{slice_now
 Die Auswertung gestaltete sich als anspruchsvoller als gedacht, da sich die Druckqualität nur minimal von Objekt zu Objekt unterschied. Als Vorüberlegung erstellte ich mir in Abbildung \ref*{schaubild} zu sehende Grafik. Demnach sollten aufgrund der deutlich höheren Überlappungsfläche Überhänge mit geringerer Schichtdicke deutlich besser zu drucken sein.
 
 \begin{figure}[H]
-	\centerline{\includegraphics[width=250px]{./images/layerheights.drawio.png}}
-	\caption{Überlappungen von Überhängen unterschiedlich hoher Druckschichten}
-	\label{schaubild}
-	\end{figure}
+\centerline{\includegraphics[width=250px]{./images/layerheights.drawio.png}}
+\caption{Überlappungen von Überhängen unterschiedlich hoher Druckschichten}
+\label{schaubild}
+\end{figure}
 
-Betrachtet man jedoch die gedruckten Modelle entsteht die Grafik Abbildung \ref*{abhängigkeit}, welche genau das Gegenteil aufzeigt. Hier wird deutlich, dass je höher die Schichtdicke, desto größere Überhangwinkel können mit akzeptabler Qualität geduckt werden. Diese Unterschiede können auch in Abbildung \ref*{drucke} gesehen werden.
+Betrachtet man jedoch die gedruckten Modelle entsteht die Grafik Abbildung \ref*{abhängigkeit}, welche genau das Gegenteil aufzeigt. Hier wird deutlich, dass je höher die Schichtdicke, desto größere Überhangwinkel können mit akzeptabler Qualität geduckt werden. Diese Unterschiede können auch in Abbildung \ref*{druck1} - \ref*{druck4} gesehen werden.
 
 \begin{figure}[H]
-	\centerline{\includegraphics[width=250px]{./images/diagramm.png}}
-	\caption{Abhängigkeit Schichtdicke - Überhangwinkel mit akzeptabler Qualität}
-	\label{diagramm}
+\centerline{\includegraphics[width=250px]{./images/diagramm.png}}
+\caption{Abhängigkeit Schichtdicke - Überhangwinkel mit akzeptabler Qualität}
+\label{abhängigkeit}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=250px]{./images/007.jpg}}
+\caption{Front des gedruckten Objekts - 0.07 mm Schichtdicke}
+\label{druck1}
+
+\end{figure}
+\begin{figure}[H]
+\centerline{\includegraphics[width=250px]{./images/010.jpg}}
+\caption{Front des gedruckten Objekts - 0.10 mm Schichtdicke}
+\label{druck2}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=250px]{./images/020.jpg}}
+\caption{Front des gedruckten Objekts - 0.20 mm Schichtdicke}
+\label{druck3}
+\end{figure}
+
+\begin{figure}[H]
+\centerline{\includegraphics[width=250px]{./images/020_sup.jpg}}
+\caption{Front des gedruckten Objekts - 0.20 mm Schichtdicke und entferntes Unterstützungsmaterial}
+\label{druck4}
+\end{figure}
+
+Eine Erklärung hierfür könnten die unterschiedlichen Abkühlverhalten der Schichtdicken sein. Ist ein Layer sehr dünn, so besteht die Möglichkeit, dass sich dieser bei einer erneuten Überfahrung der Düse eine Schicht weiter so stark erwärmt, dass es erneut zu einer Verflüssigung kommt. Diese zwei flüssigen Schichten kühlen dann unterschiedlich schnell ab, wodurch es zu einer Verformung kommt und was sich negativ auf die Druckqualität auswirkt.
+
+Die Qualität des Druckes mit Unterstützungsmaterial ist nur marginal besser, da auch das Hilfsmaterial seine Spuren hinterlassen hat. Ebenso ließ sich dieses nicht einfach entfernen, was zu zusätzlichen Spuren am Objekt geführt hat. Der Sinn hinter Hilfsmaterial ist, bei Überhangdrucken neuen Schichten zusätzliche Stabilität zu bieten. Bei Drucken mit sehr großen solcher Winkel, wie im Extremfall beispielsweise 90 Grad, ist es sicherlich sinnvoll und sogar notwendig mit Unterstützungsmaterial zu drucken. In diesem Fall ist es allerdings nicht notwendig, und macht durch das zusätzliche zu druckende Material den Druck nur länger.
+
+Bezüglich Drucklänge liefert Abbildung \ref*{print_duration} nützliche Informationen. Hier ist das gedruckte Modell mit Unterstützungsstrukturen nicht nennenswert, denn dessen Druckdauer verlängerte sich im Vergleich zum Modell ohne Hilfsmaterial nur um 3 Minuten.
+
+
+\begin{figure}[H]
+	\centerline{\includegraphics[width=250px]{./images/dauer.png}}
+	\caption{Abhängigkeit Schichtdicke - Druckdauer}
+	\label{print_duration}
 	\end{figure}
 
-Eine Erklärung hierfür könnten die unterschiedlichen Abkühlverhalten der Schichtdicken sein.
+Interessant zu sehen ist, dass obwohl sich die Anzahl der Schichten von 0,20 mm zu 0,10 mm Druckeinstellung verdoppelt habt, die Druckdauer nicht doppelt so lang ist. Der Grund hierin liegt höchstwahrscheinlich in den ersten Schichten, die in beiden Fällen besonders langsam gedruckt werden.
 
 %Hier wird eine Quelle zitiert \cite{Quelle}.
 \newpage
 \begin{thebibliography}{999}
-\bibitem{Quelle} Versuchsanleit ung zu (Abgerufen am 23.03.2022) 
+\bibitem{Quelle} Versuchsanleitung zu Versuch 03 (Abgerufen am 09.04.2022) 
 \end{thebibliography}
 
 % Für Dokumente mit mehr Referenzen empfiehlt es sich, auf eine separate .bib -Datei umzusteigen, die alle Referenzen enthält. Diese Referenzen können bei den meisten wissenschaftlichen Publikationen direkt über "BibTex-Export" oder ähnliches heruntergeladen werden. Anstelle von \begin{thebibliography}...\bibitem{}..\bibitem{}..\end{thebibliography} muss dann lediglich \bibliography{Dateiname.bib} eingebunden werden.
