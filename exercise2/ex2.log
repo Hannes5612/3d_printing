@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.15)  2 APR 2022 22:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.15)  6 APR 2022 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -704,7 +704,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 141.
  (c:/texlive/2021/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -712,7 +712,7 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 \tf@toc=\write4
 \openout4 = `ex2.toc'.
 
- [3] (./ex2.lof)
+ [2] (./ex2.lof)
 \tf@lof=\write5
 \openout5 = `ex2.lof'.
 
@@ -727,7 +727,7 @@ l.162 \newpage
                [1
 
 ]
-<./images/printrun.png, id=86, 1445.4pt x 813.0375pt>
+<./images/printrun.png, id=82, 1445.4pt x 813.0375pt>
 File: ./images/printrun.png Graphic file (type png)
 <use ./images/printrun.png>
 Package pdftex.def Info: ./images/printrun.png  used on input line 182.
@@ -737,16 +737,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
                    \relax 
 l.186 
        [2]
-<./images/prusaSlicer.png, id=92, 1445.4pt x 813.0375pt>
+<./images/prusaSlicer.png, id=88, 1445.4pt x 813.0375pt>
 File: ./images/prusaSlicer.png Graphic file (type png)
 <use ./images/prusaSlicer.png>
 Package pdftex.def Info: ./images/prusaSlicer.png  used on input line 210.
 (pdftex.def)             Requested size: 351.31378pt x 197.61417pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.214 
-       [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.214 
@@ -763,7 +759,7 @@ LaTeX Warning: Reference `fig:prusa' on page 4 undefined on input line 215.
                                                   \__shipout_drop_firstpage_...
 l.230 
        <./images/prusaSlicer.png>]
-<./images/diagramm.png, id=104, 362.007pt x 220.752pt>
+<./images/diagramm.png, id=100, 362.007pt x 220.752pt>
 File: ./images/diagramm.png Graphic file (type png)
 <use ./images/diagramm.png>
 Package pdftex.def Info: ./images/diagramm.png  used on input line 266.
@@ -777,7 +773,7 @@ l.270
                                                   \__shipout_drop_firstpage_...
 l.270 
       ]
-<./images/scan.png, id=111, 916.6245pt x 439.6425pt>
+<./images/scan.png, id=108, 916.6245pt x 439.6425pt>
 File: ./images/scan.png Graphic file (type png)
 <use ./images/scan.png>
 Package pdftex.def Info: ./images/scan.png  used on input line 276.
@@ -791,7 +787,7 @@ l.298
                                                   \__shipout_drop_firstpage_...
 l.298 
        <./images/diagramm.png> <./images/scan.png>]
-<./images/raupe.png, id=119, 376.461pt x 246.156pt>
+<./images/raupe.png, id=116, 376.461pt x 246.156pt>
 File: ./images/raupe.png Graphic file (type png)
 <use ./images/raupe.png>
 Package pdftex.def Info: ./images/raupe.png  used on input line 335.
@@ -809,7 +805,7 @@ l.339
                                                   \__shipout_drop_firstpage_...
 l.339 
       ]
-<./images/quader.png, id=124, 375.366pt x 246.156pt>
+<./images/quader.png, id=121, 375.366pt x 246.156pt>
 File: ./images/quader.png Graphic file (type png)
 <use ./images/quader.png>
 Package pdftex.def Info: ./images/quader.png  used on input line 342.
@@ -838,10 +834,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,19n,106p,10684b,898s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbl1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb>
-Output written on ex2.pdf (13 pages, 1783298 bytes).
+Output written on ex2.pdf (12 pages, 1783236 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  34 named destinations out of 1000 (max. 500000)
  87 words of extra memory for PDF output out of 10000 (max. 10000000)
 
